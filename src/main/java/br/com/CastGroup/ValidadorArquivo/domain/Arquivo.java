@@ -1,29 +1,27 @@
 package br.com.CastGroup.ValidadorArquivo.domain;
 
-import br.com.CastGroup.ValidadorArquivo.enums.PositionFile;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "FILE")
-public class File implements Serializable {
+public class Arquivo implements Serializable {
 
     private  static final long serialVersionUID =1L;
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
-    private long idFIle;
+    private Long idFIle;
 
-    private PositionFile positionFile;
+    private String positionFile;
 
     private String nameFile;
 
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -31,7 +29,7 @@ public class File implements Serializable {
         this.id = id;
     }
 
-    public long getIdFIle() {
+    public Long getIdFIle() {
         return idFIle;
     }
 
@@ -39,11 +37,11 @@ public class File implements Serializable {
         this.idFIle = idFIle;
     }
 
-    public PositionFile getPositionFile() {
+    public String getPositionFile() {
         return positionFile;
     }
 
-    public void setPositionFile(PositionFile positionFile) {
+    public void setPositionFile(String positionFile) {
         this.positionFile = positionFile;
     }
 

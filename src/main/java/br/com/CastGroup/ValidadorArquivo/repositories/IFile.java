@@ -1,9 +1,9 @@
 package br.com.CastGroup.ValidadorArquivo.repositories;
 
-import br.com.CastGroup.ValidadorArquivo.domain.File;
+import br.com.CastGroup.ValidadorArquivo.domain.Arquivo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IFile extends JpaRepository<File,Long> {
+public interface IFile extends JpaRepository<Arquivo,Long> {
 
-     File find(long id);
+//     Arquivo find(Long id);
 }
