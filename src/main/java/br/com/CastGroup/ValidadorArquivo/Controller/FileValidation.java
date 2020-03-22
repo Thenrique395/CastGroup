@@ -1,7 +1,6 @@
 package br.com.CastGroup.ValidadorArquivo.Controller;
 
 import br.com.CastGroup.ValidadorArquivo.domain.Arquivo;
-import br.com.CastGroup.ValidadorArquivo.repositories.IFile;
 import br.com.CastGroup.ValidadorArquivo.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -48,7 +48,7 @@ public class FileService {
             String stringBase64Right = new String(Base64.getDecoder().decode(arquivoList.get(1).getNameFile()));
             if (stringBase64Left.length() != stringBase64Right.length()) {
                 res.put("Error", "Documentos " + arquivoList.get(0).getIdFIle() + " e " + arquivoList.get(1).getIdFIle() + " com tamanhos diferentes");
-                iFile.deleteAll();
+//                iFile.deleteAll();
             } else {
                 char[] stringUm = stringBase64Left.toCharArray();
                 char[] stringDois = stringBase64Right.toCharArray();
@@ -65,21 +65,21 @@ public class FileService {
                 }
                 if (listDiff.isEmpty()) {
                     res.put("Success", "Documentos " + arquivoList.get(0).getIdFIle() + " e " + arquivoList.get(0).getIdFIle() + " idênticos");
-                    iFile.deleteAll();
+//                iFile.deleteAll();
                 } else {
                     res.put("Diff","Documento ID(Left) " + arquivoList.get(0).getIdFIle() + " diferente do Documento ID(Right) " + arquivoList.get(0).getIdFIle() + " na(s) posição(es) " + listDiff.toString());
-                    iFile.deleteAll();
+//                iFile.deleteAll();
                 }
             }
         } else if (!arquivoList.isEmpty() && arquivoList.isEmpty()) {
             res.put("Error", "Nenhum documento right encontrado");
-            iFile.deleteAll();
+//                iFile.deleteAll();
         } else if (arquivoList.isEmpty() && !arquivoList.isEmpty()) {
             res.put("Error", "Nenhum documento left encontrado");
-            iFile.deleteAll();
+//                iFile.deleteAll();
         } else if (arquivoList.isEmpty() && arquivoList.isEmpty()) {
             res.put("Error", "Nenhum documento left e right encontrado");
-            iFile.deleteAll();
+//                iFile.deleteAll();
         }
         return new ResponseEntity<Map<String, String>>(res, HttpStatus.OK);
     }
