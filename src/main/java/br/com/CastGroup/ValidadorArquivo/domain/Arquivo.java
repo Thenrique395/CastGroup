@@ -20,6 +20,16 @@ public class Arquivo implements Serializable {
     private String nameFile;
 
 
+    public  Arquivo(){
+
+    }
+
+    public Arquivo(Long id, Long idFIle, String positionFile, String nameFile) {
+        this.id = id;
+        this.idFIle = idFIle;
+        this.positionFile = positionFile;
+        this.nameFile = nameFile;
+    }
 
     public Long getId() {
         return id;
