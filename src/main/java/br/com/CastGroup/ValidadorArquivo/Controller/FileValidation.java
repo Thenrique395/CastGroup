@@ -26,8 +26,8 @@ public class FileValidation {
     }
 
     @GetMapping("/diff")
-    public ResponseEntity<Map<String, String>> getDiff() {
-        return fileService.getDiff();
+    public ResponseEntity<Map<String, String>> compararArquivos() {
+        return fileService.compararArquivos();
     }
 
 }

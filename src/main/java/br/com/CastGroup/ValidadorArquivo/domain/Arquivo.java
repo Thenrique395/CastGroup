@@ -24,8 +24,7 @@ public class Arquivo implements Serializable {
 
     }
 
-    public Arquivo(Long id, Long idFIle, String positionFile, String nameFile) {
-        this.id = id;
+    public Arquivo( Long idFIle, String positionFile, String nameFile) {
         this.idFIle = idFIle;
         this.positionFile = positionFile;
         this.nameFile = nameFile;
